@@ -20,8 +20,8 @@ async function checkWeather(city) {
 
     const response = await fetch(apiUrl + city + `&appid=${apiKey}`)
 
-    Error.style.display = 'none'
-    if(response.status == 404){
+    Error.style.display = 'none' // remove the error
+    if(response.status == 404){ // display an error if invalid city
         Error.style.display = 'block'
     }
 
